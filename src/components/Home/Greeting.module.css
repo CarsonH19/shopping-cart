@@ -1,0 +1,13 @@
+.greeting {
+  
+}
+
+.greeting button {
+  width: 150px;
+  height: auto;
+  margin: auto;
+  background-color: rgb(50, 47, 83);
+  color: whitesmoke;
+  border: none;
+  cursor: pointer;
+}
