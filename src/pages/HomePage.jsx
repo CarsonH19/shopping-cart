@@ -1,8 +1,11 @@
+import FeaturedItems from "../components/Home/FeaturedItems";
+import Greeting from "../components/Home/Greeting";
+
 function HomePage() {
   return (
     <>
-      <section>GREETING</section>
-      <section>FEATURED ITEMS</section>
+      <Greeting />
+      <FeaturedItems />
     </>
   );
 }
