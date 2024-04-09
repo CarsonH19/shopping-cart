@@ -43,6 +43,13 @@ body {
   margin: 0;
 }
 
+main {
+  max-width: 70rem;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
 h1 {
   margin: 0;
 }

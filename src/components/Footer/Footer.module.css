@@ -1,0 +1,42 @@
+
+footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 16rem;
+  margin-bottom: 3rem;
+}
+
+
+footer .column p {
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+
+footer .column h4 {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+footer .column > a {
+  display: block;
+  color: #ccc;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+footer .column > a:hover {
+  color: #1d4ed8;
+}
+
+.copyright {
+  max-width: 50rem;
+  margin: auto;
+  padding: 1rem;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+}
