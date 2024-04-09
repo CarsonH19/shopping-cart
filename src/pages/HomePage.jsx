@@ -1,5 +1,10 @@
 function HomePage() {
-  return <h1>HomePage</h1>
+  return (
+    <>
+      <section>GREETING</section>
+      <section>FEATURED ITEMS</section>
+    </>
+  );
 }
 
 export default HomePage;

@@ -8,6 +8,7 @@ function RootLayout() {
       <main>
         <Outlet />
       </main>
+      <footer>Footer</footer>
     </>
   )
 }
