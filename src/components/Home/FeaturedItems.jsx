@@ -13,7 +13,7 @@ export default function FeaturedItems() {
   console.log(loadedItems);
 
   return (
-    <section>
+    <section className={classes.featured}>
       <h2>Featured Items</h2>
       <ul className={classes['item-list']}>
         {loadedItems.map((item) => (
