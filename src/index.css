@@ -9,8 +9,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: black;
+  background-color: rgb(246, 245, 250);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -44,14 +44,23 @@ body {
 }
 
 main {
-  max-width: 70rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
   margin: auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
 
 h1 {
   margin: 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: bolder;
 }
 
 ul {
