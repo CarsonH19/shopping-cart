@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 export default function ItemCard({ item }) {
   return (
-    <li className={classes.item}>
-      <Link to={`/store/${item.id}`}>
+    <li className={classes.item} key={item.id}>
+      <Link to={`/${item.id}`}>
         <article className={classes["item-article"]}>
           <img src={item.image} alt={item.title} />
           <div className={classes["item-card-info"]}>
