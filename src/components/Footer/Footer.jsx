@@ -1,3 +1,4 @@
+import Copyright from "./Copyright";
 import classes from "./Footer.module.css";
 
 export default function Footer() {
@@ -23,10 +24,7 @@ export default function Footer() {
           <a href="#">Terms & Conditions</a>
         </div>
       </footer>
-
-      <div className={classes.copyright}>
-        Copyright © 2024 Carson Harp. All Rights Reserved.
-      </div>
+      <Copyright />
     </>
   );
 }
