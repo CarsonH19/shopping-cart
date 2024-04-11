@@ -1,6 +1,6 @@
-// import classes from "./Items.module.css";
+// import classes from "./Item.module.css";
 
-export default function Items() {
+export default function Item({ item }) {
   return (
     <section>
        <div>
