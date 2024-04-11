@@ -1,5 +1,9 @@
+import Item from "../components/Store/Item";
+
 function ItemPage() {
-  return <h1>ItemPage</h1>
+  return (
+    <Item />
+  )
 }
 
 export default ItemPage;

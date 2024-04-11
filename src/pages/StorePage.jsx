@@ -2,7 +2,9 @@ import Store from "../components/Store/Store";
 
 function StorePage() {
   return (
-    <Store />
+    <>
+      <Store />
+    </>
   );
 }
 
