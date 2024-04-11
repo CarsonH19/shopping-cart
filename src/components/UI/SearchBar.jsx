@@ -1,29 +1,35 @@
-import { useState } from 'react';
+import { useState } from "react";
+import useHttp from "../../hooks/useHttp";
+import classes from "./SearchBar.module.css";
 
-const SearchBar = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+const requestConfig = {};
+
+export default function SearchBar() {
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleChange = (event) => {
     setSearchQuery(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Pass the searchQuery to the parent component's onSearch function
-    // onSearch(searchQuery);
+
+    const { data: loadedItems } = useHttp(
+      `https://fakestoreapi.com/products?search=${searchQuery}`,
+      requestConfig,
+      []
+    );
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <input
+        className={classes.search}
         type="text"
         placeholder="Search..."
         value={searchQuery}
         onChange={handleChange}
       />
-      <button type="submit">Search</button>
     </form>
   );
-};
-
-export default SearchBar;
+}
