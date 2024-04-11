@@ -1,12 +1,8 @@
-import { Outlet } from "react-router-dom";
+import Store from "../components/Store/Store";
 
 function StorePage() {
   return (
-    <>
-      <main>
-        <Outlet />
-      </main>
-    </>
+    <Store />
   );
 }
 
