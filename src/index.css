@@ -68,3 +68,14 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+a {
+  text-decoration: none;
+  color: rgb(50, 47, 83);
+  font-size: 1.3rem;
+}
+
+a:hover,
+.active {
+  color: rgb(38, 28, 151);
+}
