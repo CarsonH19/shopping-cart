@@ -4,7 +4,17 @@ import SearchBar from "../UI/SearchBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
+import { uiActions } from "../../store/ui-slice";
+import { useDispatch, useSelector } from "react-redux";
+
 export default function MainNavigation() {
+  const dispatch = useDispatch();
+  const cartQuantity = useSelector((state) => state.cart.totalQuantity);
+
+  const handleCartClick = () => {
+    dispatch(uiActions.toggle());
+  }
+
   return (
     <header className={classes.header}>
       <h1>Store Name</h1>
