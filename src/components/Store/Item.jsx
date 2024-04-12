@@ -1,7 +1,20 @@
 import classes from "./Item.module.css";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../../store/cart-slice";
+import { useState } from "react";
 
 export default function Item({ item }) {
-  console.log(item);
+  const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
+
+  const handleChange = (event) => {
+    const value = parseInt(event.target.value);
+    setQuantity(value);
+  };
+
+  const handleAddToCart = () => {
+    dispatch(cartActions.addItemToCart({ item, quantity }));
+  };
 
   return (
     <section className={classes["item-container"]}>
@@ -17,9 +30,11 @@ export default function Item({ item }) {
               name="quantity"
               id="quantity"
               placeholder="1"
+              value={quantity}
+              onChange={handleChange}
             />
           </div>
-          <button>Add to Cart</button>
+          <button onClick={handleAddToCart}>Add to Cart</button>
         </div>
       </div>
       <hr />
