@@ -1,10 +1,13 @@
 
 footer {
   position: relative;
+  bottom: 0;
   display: flex;
   justify-content: center;
   gap: 16rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
+  padding: 1rem;
+  width: 100%;
 }
 
 
@@ -16,9 +19,9 @@ footer .column p {
 
 footer .column h4 {
   color: black;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 footer .column > a {
@@ -40,5 +43,6 @@ footer .column > a:hover {
   text-align: center;
   background-color: white;
   box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
-
+  position: relative;
+  bottom: 0;
 }
