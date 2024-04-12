@@ -1,13 +1,17 @@
 // import classes from "./Item.module.css";
 
+import { json } from 'react-router-dom';
+
 export default function Item({ item }) {
+  console.log(item);
+
   return (
     <section>
        <div>
-        <img src="" alt="" />
+        <img src={item.image} alt={item.title} />
         <div>
-          <h1>Item Name</h1>
-          <p>Price</p>
+          <h1>{item.title}</h1>
+          <p>{item.price}</p>
           <input type="number" name="quantity" id="quantity" />
           <button>Add to Cart</button>
         </div>
@@ -15,8 +19,9 @@ export default function Item({ item }) {
        <hr />
        <div>
         <h2>Description</h2>
-        <p>Text</p>
+        <p>{item.description}</p>
        </div>
     </section>
   )
 }
+
