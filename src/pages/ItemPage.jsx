@@ -28,8 +28,7 @@ async function loadItem(id) {
   }
 }
 
-export async function loader({ request, params }) {
-  console.log(`Params: ${params}`);
+export async function loader({ params }) {
   const id = params.itemId;
 
   return defer({

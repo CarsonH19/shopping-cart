@@ -1,17 +1,12 @@
 import classes from './Store.module.css';
-import useHttp from '../../hooks/useHttp';
 import ItemCard from './ItemCard';
 
-const requestConfig = {};
 
-export default function Store() {
-  const {
-    data: loadedItems,
-  } = useHttp('https://fakestoreapi.com/products/', requestConfig, []);
+export default function Store({ loadedList }) {
 
  return (
   <ul className={classes['item-list']}>
-        {loadedItems.map((item) => (
+        {loadedList.map((item) => (
           <ItemCard key={item.id} item={item}/>
         ))}
       </ul>
