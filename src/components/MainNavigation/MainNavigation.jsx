@@ -13,13 +13,13 @@ export default function MainNavigation() {
 
   const handleCartClick = () => {
     dispatch(uiActions.toggle());
-  }
+  };
 
   return (
     <header className={classes.header}>
       <h1>Store Name</h1>
       <SearchBar />
-      <div className={classes['nav-links']}>
+      <div className={classes["nav-links"]}>
         <nav>
           <ul className={classes.list}>
             <li>
@@ -45,9 +45,13 @@ export default function MainNavigation() {
             </li>
           </ul>
         </nav>
-        <div className={classes['cart-box']}>
-          <FontAwesomeIcon icon={faCartShopping} fontSize="26px" cursor="pointer" />
-          <span className={classes['cart-quantity']}>0</span>
+        <div className={classes["cart-box"]} onClick={handleCartClick}>
+          <FontAwesomeIcon
+            icon={faCartShopping}
+            fontSize="26px"
+            cursor="pointer"
+          />
+          <span className={classes["cart-quantity"]}>{cartQuantity}</span>
         </div>
       </div>
     </header>
