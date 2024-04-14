@@ -67,6 +67,12 @@
   cursor: pointer;
 }
 
+.item-info button:active {
+  scale: 0.95;
+  background-color: rgb(63, 59, 105);
+  /* transition: 0.5s; */
+}
+
 .item-details {
   display: flex;
   flex-direction: column;
