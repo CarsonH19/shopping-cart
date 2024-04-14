@@ -1,18 +1,28 @@
-// import classes from "./CartItems.module.css";
+import classes from "./CartItem.module.css";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../../store/cart-slice";
 
-export default function CartItems() {
+export default function CartItems({ item }) {
+  const dispatch = useDispatch();
+
+  const handleRemoveItem = () => {
+    const id = item.id;
+    dispatch(cartActions.removeItemFromCart(id));
+  };
+
   return (
-    <div>
-      <img src="" alt="" />
+    <li className={classes["cart-item"]}>
+      <img src={item.image} alt={item.name} />
       <div>
-        <h3>Item Name</h3>
-        <p>Price</p>
-        <div>
-          <label>Quantity</label>
-          <input type="number" />
+        <h3>{item.name}</h3>
+        <div className={classes["cart-item-details"]}>
+          <p>Quantity: {item.quantity}</p>
+          <p>Price: ${item.price.toFixed(2)} / Item </p>
         </div>
       </div>
-      DELETE ICON
-    </div>
+      <p className={classes.close} onClick={handleRemoveItem}>
+        X
+      </p>
+    </li>
   );
 }
