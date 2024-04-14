@@ -2,6 +2,9 @@ import classes from "./CartItem.module.css";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
+
 export default function CartItems({ item }) {
   const dispatch = useDispatch();
 
@@ -20,9 +23,13 @@ export default function CartItems({ item }) {
           <p>Price: ${item.price.toFixed(2)} / Item </p>
         </div>
       </div>
-      <p className={classes.close} onClick={handleRemoveItem}>
-        X
-      </p>
+      <FontAwesomeIcon
+        className={classes.close}
+        onClick={handleRemoveItem}
+        icon={faTrashCan}
+        fontSize="0.8rem"
+        cursor="pointer"
+      />
     </li>
   );
 }
