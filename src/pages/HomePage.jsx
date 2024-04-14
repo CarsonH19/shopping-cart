@@ -10,7 +10,7 @@ function HomePage() {
   return (
     <>
       <Greeting />
-      <Suspense fallback={<p style={{ textAlign: "center" }}>Loading...</p>}>
+      <Suspense fallback={<p style={{ textAlign: "center", fontSize: "2rem" }}>Loading...</p>}>
         <Await resolve={itemList}>
           {(loadedList) => <FeaturedItems loadedList={loadedList} />}
         </Await>
@@ -35,8 +35,8 @@ async function loadItemList() {
   }
 }
 
-export async function loader() {
+export function loader() {
   return defer({
-    itemList: await loadItemList(),
+    itemList: loadItemList(),
   });
 }

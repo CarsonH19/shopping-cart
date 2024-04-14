@@ -1,6 +1,5 @@
 import classes from "./FeaturedItems.module.css";
 import ItemCard from "../Store/ItemCard";
-// import useHttp from "../../hooks/useHttp";
 
 
 export default function FeaturedItems({ loadedList }) {

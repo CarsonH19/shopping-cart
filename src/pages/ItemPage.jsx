@@ -6,7 +6,7 @@ function ItemPage() {
   const { item } = useLoaderData();
 
   return (
-    <Suspense fallback={<p style={{ textAlign: "center" }}>Loading...</p>}>
+    <Suspense fallback={<p style={{ textAlign: "center", fontSize: "2rem" }}>Loading...</p>}>
       <Await resolve={item}>{(loadedItem) => <Item item={loadedItem} />}</Await>
     </Suspense>
   );
@@ -28,10 +28,10 @@ async function loadItem(id) {
   }
 }
 
-export async function loader({ params }) {
+export function loader({ params }) {
   const id = params.itemId;
 
   return defer({
-    item: await loadItem(id),
+    item: loadItem(id),
   });
 }
