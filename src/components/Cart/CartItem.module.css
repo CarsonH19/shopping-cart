@@ -7,7 +7,8 @@
   gap: 1rem;
   padding: 1rem;
   border-top: 1px solid lightgray;
-  width: 100%
+  width: 100%;
+  align-self: flex-start;
 }
 
 .cart-item div {

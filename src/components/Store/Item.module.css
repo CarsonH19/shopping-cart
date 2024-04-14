@@ -23,13 +23,15 @@
   width: 50%;
   max-height: 30rem;
   object-fit:cover;
+  border-radius: 20px;
 }
 
 .item-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem
+  gap: 1rem;
+  padding-left: 1rem
 }
 
 .price {
