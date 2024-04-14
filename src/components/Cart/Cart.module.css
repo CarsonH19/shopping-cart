@@ -1,0 +1,44 @@
+.cart {
+  overflow: auto;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0; 
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #666;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.close:hover {
+  color: #df0000;
+}
+
+.checkout {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+}
+
+.button {
+  width: 180px;
+  height: 60px;
+  margin: 1rem;
+  border-radius: 10px;
+  background-color: rgb(50, 47, 83);
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: whitesmoke;
+  border: none;
+  cursor: pointer;
+}
+
+.total {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: rgb(50, 47, 83);
+}

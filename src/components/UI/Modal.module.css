@@ -1,0 +1,18 @@
+.dialog {
+  height: 40rem;
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px;
+  border-radius: 10px;
+
+}
+
+.dialog h1 {
+  margin: 1rem;
+}
+
+.dialog div {
+  margin: 1rem;
+}
